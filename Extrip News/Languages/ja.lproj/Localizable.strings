@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  TemplateForWebViewBasedApps
+
+  Created by Maxim Gaysin on 14.10.2019.
+  Copyright © 2019 Ekstrip, OOO. All rights reserved.
+*/
+
+"please wait" = "待って！";
+"Our apps" = "私達の適用";
+"Share" = "シェア";
+"Rate this app" = "このアプリを評価";
+"User information" = "ユーザー情報";
+"Autofill" = "自動入力";

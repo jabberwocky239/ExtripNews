@@ -1,0 +1,36 @@
+
+/* Class = "UIButton"; normalTitle = "Continue"; ObjectID = "0OQ-vq-XtI"; */
+"0OQ-vq-XtI.normalTitle" = "Verder";
+
+/* Class = "UIButton"; normalTitle = "Clear"; ObjectID = "1gv-36-4sa"; */
+"1gv-36-4sa.normalTitle" = "Wissen";
+
+/* Class = "UISegmentedControl"; BML-lo-rea.segmentTitles[0] = "Mr"; ObjectID = "BML-lo-rea"; */
+"BML-lo-rea.segmentTitles[0]" = "de heer";
+
+/* Class = "UISegmentedControl"; BML-lo-rea.segmentTitles[1] = "Mrs"; ObjectID = "BML-lo-rea"; */
+"BML-lo-rea.segmentTitles[1]" = "mevrouw";
+
+/* Class = "UISegmentedControl"; BML-lo-rea.segmentTitles[2] = "Miss"; ObjectID = "BML-lo-rea"; */
+"BML-lo-rea.segmentTitles[2]" = "Miss";
+
+/* Class = "UISegmentedControl"; BML-lo-rea.segmentTitles[3] = "Ms"; ObjectID = "BML-lo-rea"; */
+"BML-lo-rea.segmentTitles[3]" = "Ms";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "Bxh-SE-MHq"; */
+"Bxh-SE-MHq.placeholder" = "Volledige voornaam";
+
+/* Class = "UITextField"; placeholder = "email"; ObjectID = "H47-ER-bs4"; */
+"H47-ER-bs4.placeholder" = "E-mailadres";
+
+/* Class = "UITextField"; placeholder = "car registration"; ObjectID = "SY1-oW-g1S"; */
+"SY1-oW-g1S.placeholder" = "voertuigregistratie";
+
+/* Class = "UITextField"; placeholder = "phone"; ObjectID = "bE8-BQ-VQ0"; */
+"bE8-BQ-VQ0.placeholder" = "Telefoonnummer";
+
+/* Class = "UITextField"; placeholder = "Surname"; ObjectID = "gGy-3c-lDw"; */
+"gGy-3c-lDw.placeholder" = "Achternaam";
+
+/* Class = "UILabel"; text = "This app do not share personal information with third parties"; ObjectID = "t71-sl-i1E"; */
+"t71-sl-i1E.text" = "Deze app deelt geen persoonlijke informatie met derden";

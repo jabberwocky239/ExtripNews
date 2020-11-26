@@ -1,0 +1,40 @@
+
+/* Class = "UIButton"; normalTitle = "Continue"; ObjectID = "0OQ-vq-XtI"; */
+"0OQ-vq-XtI.normalTitle" = "Continua";
+
+/* Class = "UIButton"; normalTitle = "Clear"; ObjectID = "1gv-36-4sa"; */
+"1gv-36-4sa.normalTitle" = "Cancella";
+
+/* Class = "UISegmentedControl"; BML-lo-rea.segmentTitles[0] = "Mr"; ObjectID = "BML-lo-rea"; */
+"BML-lo-rea.segmentTitles[0]" = "Sig.";
+
+/* Class = "UISegmentedControl"; BML-lo-rea.segmentTitles[1] = "Mrs"; ObjectID = "BML-lo-rea"; */
+"BML-lo-rea.segmentTitles[1]" = "Sig.ra";
+
+/* Class = "UISegmentedControl"; BML-lo-rea.segmentTitles[2] = "Miss"; ObjectID = "BML-lo-rea"; */
+"BML-lo-rea.segmentTitles[2]" = "Sig.na";
+
+/* Class = "UISegmentedControl"; BML-lo-rea.segmentTitles[3] = "Ms"; ObjectID = "BML-lo-rea"; */
+"BML-lo-rea.segmentTitles[3]" = "Ms";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "Bxh-SE-MHq"; */
+"Bxh-SE-MHq.placeholder" = "Nome";
+
+/* Class = "UITextField"; placeholder = "email"; ObjectID = "H47-ER-bs4"; */
+"H47-ER-bs4.placeholder" = "e-mail";
+
+/* Class = "UITextField"; placeholder = "car registration"; ObjectID = "SY1-oW-g1S"; */
+"SY1-oW-g1S.placeholder" = "numero dell'auto";
+
+/* Class = "UITextField"; placeholder = "phone"; ObjectID = "bE8-BQ-VQ0"; */
+"bE8-BQ-VQ0.placeholder" = "numero di telefono";
+
+/* Class = "UITextField"; placeholder = "Surname"; ObjectID = "gGy-3c-lDw"; */
+"gGy-3c-lDw.placeholder" = "Cognome";
+
+/* Class = "UILabel"; text = "This app do not share personal information with third parties"; ObjectID = "t71-sl-i1E"; */
+"t71-sl-i1E.text" = "Questa app non condivide informazioni personali con terze parti";
+
+
+/* Class = "UILabel"; text = "Due to restrictions on booking sites, autocomplete does not work for all sites"; ObjectID = "iWA-5R-vlY"; */
+"iWA-5R-vlY.text" = "A causa delle restrizioni dei siti di prenotazione, autofill non funziona per tutti i siti";
