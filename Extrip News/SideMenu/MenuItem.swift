@@ -22,9 +22,8 @@ struct MenuItem {
   
   static func items() -> [MenuItem] {
     return [
-      //Services
-    MenuItem(title: NSLocalizedString("Aeroexpress", comment: ""), image: nil, type: 0),
-    MenuItem(title: NSLocalizedString("Trains", comment: ""), image:  nil, type: 0),
+      //Channels
+ 
       //Extrip
     MenuItem(title: NSLocalizedString("Our apps", comment: ""), image: nil, type: 1),
     MenuItem(title: NSLocalizedString("Share", comment: ""), image: nil, type: 1),

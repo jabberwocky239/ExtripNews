@@ -11,9 +11,6 @@ import StoreKit
 
 protocol SidePanelViewControllerDelegate {
   var sourceViewForActivityController: UIView { get }
-  func showUserInformationViewController()
-  func loadAeroexpressURL()
-  func loadRailwaysURL()
 }
 
 class SidePanelViewController: UIViewController {
@@ -75,30 +72,7 @@ extension SidePanelViewController: UITableViewDataSource {
 
 extension SidePanelViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    switch indexPath.row {
-      case 5:
-        startAeroexpress()
-      case 4:
-        startRailwaysTicketsBooking()
-      case 3:
-        showExtripApps()
-      case 2:
-        share()
-      case 1:
-        rate()
-      case 0:
-        userInformationShow()
-      default:
-        break
-      }
-  }
-  
-  fileprivate func startAeroexpress() {
-    delegate?.loadAeroexpressURL()
-  }
-
-  fileprivate func startRailwaysTicketsBooking() {
-    delegate?.loadRailwaysURL()
+   
   }
   fileprivate func showExtripApps() {
     let appsViewController = SKStoreProductViewController()
@@ -127,10 +101,6 @@ extension SidePanelViewController: UITableViewDelegate {
     UIApplication.shared.open(writeReviewURL, options: [:], completionHandler: nil)
 
   }
-  
-  fileprivate func userInformationShow() {
-    delegate?.showUserInformationViewController()
-      }
 }
 
 //MARK: StoreKit ProductViewControllerDelegate

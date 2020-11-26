@@ -10,6 +10,18 @@ import Foundation
 
 import StoreKit
 
+struct Storage {
+  static var userDefaults = UserDefaults.standard
+}
+
+struct UserDefaultsKeys {
+  static let processCompletedCountKey: String = "processCompletedCount"
+  
+  
+  static let lastVersionPromptedForReviewKey: String = "lastVersionPromptedForReview"
+  
+}
+
 struct ReviewRequest {
   static var shared = ReviewRequest()
   

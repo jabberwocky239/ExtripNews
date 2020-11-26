@@ -18,8 +18,4 @@ public extension UIStoryboard {
   static internal func rightMenuController() -> SidePanelViewController? {
     return mainStoryboard().instantiateViewController(withIdentifier: "RightMenuViewController") as? SidePanelViewController
   }
-
-  static internal func userInformationViewController() -> UserInformationViewController? {
-    return mainStoryboard().instantiateViewController(withIdentifier: "UserInformationViewController") as? UserInformationViewController
-  }
 }
