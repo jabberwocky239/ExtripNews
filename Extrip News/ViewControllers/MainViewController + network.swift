@@ -12,10 +12,10 @@ extension MainViewController {
   
   func getXML(from url: URL) {
     let completion: (Result<Data, Error>) -> Void = { [weak self] result in
+      guard let self = self else {return}
       switch result {
       case .success(let data):
-        var x = 2
-        var link: String? = ""
+        var x = self.channel.fakeItemsNumber
         var items: [XML.Accessor] = []
         let channel = XML.parse(data).rss.channel
         var item: XML.Accessor = channel.item[x]
@@ -41,10 +41,7 @@ extension MainViewController {
           articles[$0.offset].date = PublicationDate.short(from: items[$0.offset].pubDate.text ?? "")
           articles[$0.offset].image = $0.element.content.header.figure.img.attributes["src"] ?? ""
         })
-        self?.articles = articles
-        self?.articles.forEach({
-          print($0)
-        })
+        self.articles = articles
         
       case .failure(let error):
         print(error)
@@ -59,11 +56,8 @@ extension MainViewController {
 
 extension MainViewController {
   func change(channel: Channels) {
-    if let url = URL(string: channel.rawValue) {
-      UserDefaults.standard.set(channel.name, forKey: UserDefaultsKeys.lastChannel)
-      getXML(from: url)
-      self.navigationItem.title = channel.name.capitalized
-    }
+    UserDefaults.standard.set(channel.name, forKey: UserDefaultsKeys.lastChannel)
+    self.channel = channel
   }
 }
 

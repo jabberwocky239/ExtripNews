@@ -32,22 +32,26 @@ class MainViewController: UIViewController {
   //XML Parsing
   
   @IBOutlet weak var tableView: UITableView!
-  var url: URL!
+  var channel: Channels = Channels.railroad {
+    willSet {
+      guard let url = URL(string: newValue.rawValue) else { return }
+      navigationItem.title = newValue.name
+      getXML(from: url)
+    }
+  }
   var selectedLink: String!
   var articles: [Article] = [] {
     didSet {
-      DispatchQueue.main.async { self.tableView.reloadData() }
+      DispatchQueue.main.async {
+        self.articles.forEach({print($0)})
+        self.tableView.reloadData() }
     }
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
     self.navigationController?.isNavigationBarHidden = false
-    let lastChannel = Channels(from: UserDefaults.standard.string(forKey: UserDefaultsKeys.lastChannel) ?? "")
-    url = URL(string: lastChannel.rawValue)
-    navigationItem.title = lastChannel.name
-    print(url)
-    getXML(from: url)
+    channel = Channels(from: UserDefaults.standard.string(forKey: UserDefaultsKeys.lastChannel) ?? "")
     toolBarConfig()
   }
 }
@@ -104,9 +108,11 @@ extension MainViewController: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "article") as! ArticleCell
+    cell.bgImageView.image = nil
     cell.bgImageView?.loadFromURL(string: articles[indexPath.row].image)
     cell.dateLabel.text = articles[indexPath.row].date
     cell.descriptionLabel.text = articles[indexPath.row].description
+    cell.selectionStyle = .none
     return cell
   }
 }
@@ -116,8 +122,4 @@ extension MainViewController: UITableViewDelegate {
     selectedLink = articles[indexPath.row].link
     performSegue(withIdentifier: "article", sender: tableView)
   }
-  
-//  func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
-//    false
-//  }
 }

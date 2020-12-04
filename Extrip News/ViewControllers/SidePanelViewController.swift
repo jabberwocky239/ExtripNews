@@ -87,6 +87,7 @@ extension SidePanelViewController: UITableViewDataSource {
     cell.textLabel?.text = nil
     cell.textLabel!.text = menu.filter{$0.type == (indexPath.section + 1)}[indexPath.row].title
     cell.contentView.transform = CGAffineTransform (scaleX: 1,y: -1)
+    cell.selectionStyle = .none
     return cell
   }
 }

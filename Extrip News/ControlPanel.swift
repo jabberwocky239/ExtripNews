@@ -70,6 +70,14 @@ enum Channels: String {
   case search = "https://tur-poisk.com/yandex_turbo.xml"
   case railroad = "https://zhd.online/rss/yandex_turbo/"
 
+  var fakeItemsNumber: Int {
+    switch self {
+    case .aeroexpress, .avia, .insuranse, .ferry, .rent, .search: return 1
+    case .railroad: return 2
+    default: return 0
+    }
+  }
+  
   var name: String {
     switch self {
     case .aeroexpress: return "Аэроэкспресс"
