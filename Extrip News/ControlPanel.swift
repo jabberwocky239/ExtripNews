@@ -71,13 +71,13 @@ enum Channels: String {
   var name: String {
     switch self {
     case .aeroexpress: return "Аэроэкспресс"
-    case .rent: return "Прокат автомобилей"
+    case .rent: return "Аренда авто"
     case .avia: return "Авиабилеты"
     case .railroad: return "РЖД"
     case .ferry: return "Паромы"
     case .hotels: return "Отели"
     case .insuranse: return "Страхование"
-    case .search: return "Поиск"
+    case .search: return "Турпоиск"
     }
   }
   
