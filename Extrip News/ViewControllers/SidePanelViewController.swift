@@ -11,6 +11,8 @@ import StoreKit
 
 protocol SidePanelViewControllerDelegate {
   var sourceViewForActivityController: UIView { get }
+  func choose(channel: Channels)
+  func closeSideMenu()
 }
 
 class SidePanelViewController: UIViewController {
@@ -26,9 +28,6 @@ class SidePanelViewController: UIViewController {
     super.viewDidLoad()
     //MARK: CONTROL PANEL PROPERTY
     view.backgroundColor = ControlPanel.sideMenuBackgroundColor
-//    tableView.register(MenuCell.self, forCellReuseIdentifier: "cell")
-//    view.layoutIfNeeded()
-//    tableViewHeightConstraint.constant = CGFloat(self.tableView.contentSize.height) + 5
     tableViewWidthConstraint.constant = {
       //MARK: TODO - move all constants to CONTROLPANEL
       switch UIDevice.current.userInterfaceIdiom {
@@ -40,20 +39,44 @@ class SidePanelViewController: UIViewController {
     }()
     tableView.bounces = false
     tableView.transform = CGAffineTransform (scaleX: 1,y: -1)
+    print(tableView.delegate)
   }
   
 }
 //MARK: - UITableViewDataSource methods
 extension SidePanelViewController: UITableViewDataSource {
   func numberOfSections(in tableView: UITableView) -> Int {
-    return 1
+    return 2
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return menu.count
+    switch section {
+    case 0: return menu.filter{$0.type == 1}.count
+    case 1: return menu.filter{$0.type == 2}.count
+    default: return 0
+    }
   }
-
   
+  func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    let titleText: String = {
+      switch section {
+      case 0: return "ПРИЛОЖЕНИЯ"
+      case 1: return "КАНАЛЫ"
+      default: return ""
+      }
+    }()
+    let rect = CGRect(x: 0, y: 0, width: self.view.frame.width * 0.67, height: 44)
+    let view = UIView(frame: rect)
+    let label = UILabel(frame: rect)
+    label.text = titleText
+    label.textAlignment = .center
+    label.backgroundColor = UIColor.white
+    view.addSubview(label)
+    view.transform = CGAffineTransform (scaleX: 1,y: -1)
+    return view
+  }
+  
+
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell()
     let view = UIView()
@@ -62,7 +85,7 @@ extension SidePanelViewController: UITableViewDataSource {
     cell.backgroundColor = ControlPanel.sideMenuCellsBackgroundColor
    
     cell.textLabel?.text = nil
-    cell.textLabel!.text = menu[indexPath.row].title
+    cell.textLabel!.text = menu.filter{$0.type == (indexPath.section + 1)}[indexPath.row].title
     cell.contentView.transform = CGAffineTransform (scaleX: 1,y: -1)
     return cell
   }
@@ -72,7 +95,29 @@ extension SidePanelViewController: UITableViewDataSource {
 
 extension SidePanelViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-   
+    switch indexPath {
+    case [0,0]: rate()
+    case [0,1]: share()
+    case [0,2]: showExtripApps()
+    default:
+      switch indexPath.row {
+      case 0: delegate?.choose(channel: Channels.search)
+      case 1: delegate?.choose(channel: Channels.rent)
+      case 2: delegate?.choose(channel: Channels.railroad)
+      case 3: delegate?.choose(channel: Channels.insuranse)
+      case 4: delegate?.choose(channel: Channels.hotels)
+      case 5: delegate?.choose(channel: Channels.ferry)
+      case 6: delegate?.choose(channel: Channels.avia)
+      case 7: delegate?.choose(channel: Channels.aeroexpress)
+      default: delegate?.choose(channel: Channels.railroad)
+      }
+      delegate?.closeSideMenu()
+    }
+    
+    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+      false
+    }
+    
   }
   fileprivate func showExtripApps() {
     let appsViewController = SKStoreProductViewController()

@@ -14,7 +14,7 @@ struct ControlPanel {
 
   //MARK: AppStore URL
   static let appStoreUrl = "https://itunes.apple.com/us/app/aeroexpress/id1477253005?ls=1&mt=8"
-  
+  static let appID: Int = 1477253005
   //MARK: - SideMenu Buttons
   static let sectionHeaderHeight: CGFloat = 45
   
@@ -57,4 +57,44 @@ struct ControlPanel {
   static let mainDivColor: UIColor = ControlPanel.ferryButtonGreenColor
   static let mainDivBorderColor: UIColor = ControlPanel.ferryButtonGreenColor
 
+}
+
+
+enum Channels: String {
+  case aeroexpress = "https://www.aeroexpress.app/yandex_turbo.xml"
+  case rent = "https://arenda-avto-online.ru/rss/yandex_turbo/"
+  case avia = "https://bilet-na-samolet.com/rss/yandex_turbo/"
+  case ferry = "https://ferry2.app/yandex_turbo.xml"
+  case hotels = "https://hotels-info.com/feed/turbo/"
+  case insuranse = "https://strakhovka-online.ru/yandex_turbo.xml"
+  case search = "https://tur-poisk.com/yandex_turbo.xml"
+  case railroad = "https://zhd.online/rss/yandex_turbo/"
+
+  var name: String {
+    switch self {
+    case .aeroexpress: return "Аэроэкспресс"
+    case .rent: return "Прокат автомобилей"
+    case .avia: return "Авиабилеты"
+    case .railroad: return "РЖД"
+    case .ferry: return "Паромы"
+    case .hotels: return "Отели"
+    case .insuranse: return "Страхование"
+    case .search: return "Поиск"
+    }
+  }
+  
+  init(from name: String) {
+    switch name {
+    case "Аэроэкспресс": self = .aeroexpress
+    case "Прокат автомобилей": self = .rent
+    case "Авиабилеты": self = .avia
+    case "РЖД": self = .railroad
+    case "Паромы": self = .ferry
+    case "Отели": self = .hotels
+    case "Страхование": self = .insuranse
+    case "Поиск": self = .search
+    default: self = .railroad
+    }
+  }
+  
 }

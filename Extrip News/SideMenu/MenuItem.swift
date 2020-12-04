@@ -10,25 +10,31 @@ import UIKit
 struct MenuItem {
   
   let title: String
-  let image: UIImage?
   let type: Int
   
-  init(title: String, image: UIImage?, type: Int) {
+  init(title: String, type: Int) {
     self.title = title
-    self.image = image
     self.type = type
     
   }
   
   static func items() -> [MenuItem] {
     return [
-      //Channels
- 
       //Extrip
-    MenuItem(title: NSLocalizedString("Our apps", comment: ""), image: nil, type: 1),
-    MenuItem(title: NSLocalizedString("Share", comment: ""), image: nil, type: 1),
-    MenuItem(title: NSLocalizedString("Rate this app", comment: ""), image: nil, type: 1),
-    MenuItem(title: NSLocalizedString("User information", comment: ""), image: nil, type: 1)].reversed()
+      MenuItem(title: NSLocalizedString("Наши приложения", comment: ""), type: 1),
+      MenuItem(title: NSLocalizedString("Подлиться", comment: ""), type: 1),
+      MenuItem(title: NSLocalizedString("Оцeните приложение", comment: ""), type: 1),
+      //Channels
+      MenuItem(title: Channels.aeroexpress.name, type: 2),
+      MenuItem(title: Channels.avia.name, type: 2),
+      MenuItem(title: Channels.ferry.name, type: 2),
+      MenuItem(title: Channels.hotels.name, type: 2),
+      MenuItem(title: Channels.insuranse.name, type: 2),
+      MenuItem(title: Channels.railroad.name, type: 2),
+      MenuItem(title: Channels.rent.name, type: 2),
+      MenuItem(title: Channels.search.name, type: 2)
+    ]
+    .reversed()
   }
   
 }

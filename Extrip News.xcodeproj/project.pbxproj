@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		940FEBC925793B690042A1FC /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940FEBC825793B690042A1FC /* ArticleCell.swift */; };
 		943B6EE1233D56EC0039A404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943B6EE0233D56EC0039A404 /* AppDelegate.swift */; };
 		943B6EE6233D56EC0039A404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 943B6EE4233D56EC0039A404 /* Main.storyboard */; };
 		943B6EE8233D56ED0039A404 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 943B6EE7233D56ED0039A404 /* Assets.xcassets */; };
@@ -17,11 +18,19 @@
 		943E25EB2340D0390041B7C7 /* ControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943E25EA2340D0390041B7C7 /* ControlPanel.swift */; };
 		9457A82F23476E500093FA30 /* UIView, UIColor Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9457A82E23476E500093FA30 /* UIView, UIColor Extension.swift */; };
 		9477A088233EADF900BC7166 /* UIStoryBoard Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9477A087233EADF900BC7166 /* UIStoryBoard Extension.swift */; };
+		94783DAF257A3E0A00940CC9 /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94783DAE257A3E0A00940CC9 /* WebViewVC.swift */; };
+		947858212577BEB700C7CEF8 /* SwiftyParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947858202577BEB700C7CEF8 /* SwiftyParser.swift */; };
+		947858252577C0CC00C7CEF8 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947858242577C0CC00C7CEF8 /* Article.swift */; };
+		947858282577C34100C7CEF8 /* MainViewController + network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947858272577C34100C7CEF8 /* MainViewController + network.swift */; };
+		9478582B2577C4A100C7CEF8 /* URLSession + REsult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478582A2577C4A100C7CEF8 /* URLSession + REsult.swift */; };
+		947858302579331100C7CEF8 /* UIImageView + cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478582F2579331100C7CEF8 /* UIImageView + cache.swift */; };
+		94785833257934EE00C7CEF8 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94785832257934EE00C7CEF8 /* Networking.swift */; };
 		948113A9234BCF8E00B0F91C /* ReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948113A8234BCF8E00B0F91C /* ReviewRequest.swift */; };
 		94A9FE662340A49100BAAE4A /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9FE652340A49100BAAE4A /* MenuItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		940FEBC825793B690042A1FC /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		9432B521233D721C00E70B01 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		943B6EDD233D56EC0039A404 /* Extrip News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Extrip News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		943B6EE0233D56EC0039A404 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +44,13 @@
 		943E25EA2340D0390041B7C7 /* ControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPanel.swift; sourceTree = "<group>"; };
 		9457A82E23476E500093FA30 /* UIView, UIColor Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView, UIColor Extension.swift"; sourceTree = "<group>"; };
 		9477A087233EADF900BC7166 /* UIStoryBoard Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryBoard Extension.swift"; sourceTree = "<group>"; };
+		94783DAE257A3E0A00940CC9 /* WebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewVC.swift; sourceTree = "<group>"; };
+		947858202577BEB700C7CEF8 /* SwiftyParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyParser.swift; sourceTree = "<group>"; };
+		947858242577C0CC00C7CEF8 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		947858272577C34100C7CEF8 /* MainViewController + network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController + network.swift"; sourceTree = "<group>"; };
+		9478582A2577C4A100C7CEF8 /* URLSession + REsult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession + REsult.swift"; sourceTree = "<group>"; };
+		9478582F2579331100C7CEF8 /* UIImageView + cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + cache.swift"; sourceTree = "<group>"; };
+		94785832257934EE00C7CEF8 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		948113A8234BCF8E00B0F91C /* ReviewRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequest.swift; sourceTree = "<group>"; };
 		94A9FE652340A49100BAAE4A /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -50,6 +66,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		940FEBC725793B530042A1FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				940FEBC825793B690042A1FC /* ArticleCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		9432B520233D721C00E70B01 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,10 +103,12 @@
 			isa = PBXGroup;
 			children = (
 				943E25EA2340D0390041B7C7 /* ControlPanel.swift */,
+				94D604E1257073E6000F27C9 /* RSS */,
 				9468726D2355A97A004B3EB9 /* StartUp */,
 				9468726A2355A8FC004B3EB9 /* Extensions */,
 				946872682355A8DE004B3EB9 /* ReviewRequest */,
 				9468726C2355A960004B3EB9 /* SideMenu */,
+				940FEBC725793B530042A1FC /* View */,
 				946872662355A875004B3EB9 /* ViewControllers */,
 				943B6EE4233D56EC0039A404 /* Main.storyboard */,
 				9468726B2355A93C004B3EB9 /* Supporting Files */,
@@ -95,7 +121,9 @@
 			children = (
 				943B6EF2233D57CB0039A404 /* ContainerViewController.swift */,
 				943B6EF6233D5C700039A404 /* MainViewController.swift */,
+				947858272577C34100C7CEF8 /* MainViewController + network.swift */,
 				943B6EF4233D59960039A404 /* SidePanelViewController.swift */,
+				94783DAE257A3E0A00940CC9 /* WebViewVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -112,7 +140,10 @@
 			isa = PBXGroup;
 			children = (
 				9477A087233EADF900BC7166 /* UIStoryBoard Extension.swift */,
+				9478582F2579331100C7CEF8 /* UIImageView + cache.swift */,
+				94785832257934EE00C7CEF8 /* Networking.swift */,
 				9457A82E23476E500093FA30 /* UIView, UIColor Extension.swift */,
+				9478582A2577C4A100C7CEF8 /* URLSession + REsult.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -141,6 +172,15 @@
 				943B6EE0233D56EC0039A404 /* AppDelegate.swift */,
 			);
 			path = StartUp;
+			sourceTree = "<group>";
+		};
+		94D604E1257073E6000F27C9 /* RSS */ = {
+			isa = PBXGroup;
+			children = (
+				947858202577BEB700C7CEF8 /* SwiftyParser.swift */,
+				947858242577C0CC00C7CEF8 /* Article.swift */,
+			);
+			path = RSS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,10 +255,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				940FEBC925793B690042A1FC /* ArticleCell.swift in Sources */,
+				9478582B2577C4A100C7CEF8 /* URLSession + REsult.swift in Sources */,
+				947858252577C0CC00C7CEF8 /* Article.swift in Sources */,
 				943B6EF5233D59960039A404 /* SidePanelViewController.swift in Sources */,
+				947858302579331100C7CEF8 /* UIImageView + cache.swift in Sources */,
+				947858282577C34100C7CEF8 /* MainViewController + network.swift in Sources */,
 				9457A82F23476E500093FA30 /* UIView, UIColor Extension.swift in Sources */,
+				94785833257934EE00C7CEF8 /* Networking.swift in Sources */,
+				94783DAF257A3E0A00940CC9 /* WebViewVC.swift in Sources */,
 				943B6EE1233D56EC0039A404 /* AppDelegate.swift in Sources */,
 				943E25EB2340D0390041B7C7 /* ControlPanel.swift in Sources */,
+				947858212577BEB700C7CEF8 /* SwiftyParser.swift in Sources */,
 				9477A088233EADF900BC7166 /* UIStoryBoard Extension.swift in Sources */,
 				948113A9234BCF8E00B0F91C /* ReviewRequest.swift in Sources */,
 				943B6EF3233D57CB0039A404 /* ContainerViewController.swift in Sources */,
@@ -381,7 +429,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4;
+				MARKETING_VERSION = 5;
 				PRODUCT_BUNDLE_IDENTIFIER = Extrip.News.En;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;
@@ -404,7 +452,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4;
+				MARKETING_VERSION = 5;
 				PRODUCT_BUNDLE_IDENTIFIER = Extrip.News.En;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;

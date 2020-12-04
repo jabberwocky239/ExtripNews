@@ -131,6 +131,13 @@ extension ContainerViewController: MainViewControllerDelegate {
 
 //MARK:-  SidePanelViewControllerDelegate
 extension ContainerViewController: SidePanelViewControllerDelegate {
+  func closeSideMenu() {
+    toggleRightMenu()
+  }
+  func choose(channel: Channels) {
+    mainViewController.change(channel: channel)
+  }
+  
   
   var sourceViewForActivityController: UIView { return self.mainViewController.view}
   

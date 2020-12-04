@@ -16,8 +16,7 @@ struct Storage {
 
 struct UserDefaultsKeys {
   static let processCompletedCountKey: String = "processCompletedCount"
-  
-  
+  static let lastChannel: String = "lastChannel"
   static let lastVersionPromptedForReviewKey: String = "lastVersionPromptedForReview"
   
 }
