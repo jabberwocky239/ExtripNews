@@ -33,19 +33,9 @@ struct ControlPanel {
   static let toolBarBackgroundColor: UIColor = .lightGray
   
   //MARK:- Side Menu Interface
-  static let sideMenuBackgroundColor: UIColor = ControlPanel.aeroexpressDarkBlueColor
-  static let sideMenuCellsBackgroundColor: UIColor = ControlPanel.aeroexpressOrangeColor
+  static let sideMenuBackgroundColor: UIColor = ControlPanel.ferryHeaderBlueColor
+  static let sideMenuCellsBackgroundColor: UIColor = ControlPanel.ferryHeaderBlueColor
   static let selectedCellColor: UIColor = ControlPanel.aeroexpressDarkBlueColor
-  
-  //MARK: - UserInformation View interface
-  static let userInformationViewBorderColor: UIColor = ControlPanel.aeroexpressDarkBlueColor
-  static let userInformationViewBorderWidth: CGFloat = 4
-  static let userInformationViewBorderRadius: CGFloat = 20
-  static let userInformationViewButtonsCornerRadius: CGFloat = 5
-  
-  static let continueButtonBackgroundColor: UIColor = ControlPanel.aeroexpressOrangeColor
-  static let clearButtonBackgroundColor: UIColor = ControlPanel.aeroexpressOrangeColor
-  static let segmentedControlBackgroundColor: UIColor = ControlPanel.ferryButtonGreenColor
   
   //MARK: - Slide Menu Width
   
@@ -94,13 +84,13 @@ enum Channels: String {
   init(from name: String) {
     switch name {
     case "Аэроэкспресс": self = .aeroexpress
-    case "Прокат автомобилей": self = .rent
+    case "Аренда авто": self = .rent
     case "Авиабилеты": self = .avia
     case "РЖД": self = .railroad
     case "Паромы": self = .ferry
     case "Отели": self = .hotels
     case "Страхование": self = .insuranse
-    case "Поиск": self = .search
+    case "Турпоиск": self = .search
     default: self = .railroad
     }
   }

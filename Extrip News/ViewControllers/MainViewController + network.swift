@@ -34,12 +34,20 @@ extension MainViewController {
         let newItems: [XML.Accessor] = itemTexts.compactMap({
           try? XML.parse("<content>" + ($0 ?? "") + "</content>")
         })
+        let pre = "<html><head><style type=\"text/css\"> body {margin: 5%; font-family: \"SFUIText-Regular\"; font-size: 44;line-height:52px;} img { max-width: 100%; width: auto; height: auto; } iframe { max-width: atuo; width: auto; height: auto; } h1 {line-height: 70px;}</style> </head><body>"
+        let htmls: [String] = items.compactMap({
+          pre + ($0["turbo:content"]
+                  .text?
+                  .removeBetween("<menu>", "</menu>")?
+                  .removeBetween("<figure>", "</figure>") ?? "") + "</body></html>"
+        })
         
         newItems.enumerated().forEach({
           articles[$0.offset].description = $0.element.content.header.h1.text ?? ""
           articles[$0.offset].link = items[$0.offset].link.text ?? ""
           articles[$0.offset].date = PublicationDate.short(from: items[$0.offset].pubDate.text ?? "")
           articles[$0.offset].image = $0.element.content.header.figure.img.attributes["src"] ?? ""
+          articles[$0.offset].html = htmls[$0.offset]
         })
         self.articles = articles
         
@@ -68,3 +76,4 @@ struct PublicationDate {
     return DateFormatter.localizedString(from: df.date(from: longString) ?? Date(), dateStyle: .medium, timeStyle: .none)
   }
 }
+

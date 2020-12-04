@@ -16,6 +16,7 @@
 		943B6EF5233D59960039A404 /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943B6EF4233D59960039A404 /* SidePanelViewController.swift */; };
 		943B6EF7233D5C700039A404 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943B6EF6233D5C700039A404 /* MainViewController.swift */; };
 		943E25EB2340D0390041B7C7 /* ControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943E25EA2340D0390041B7C7 /* ControlPanel.swift */; };
+		944720B9257AE45100311C73 /* String + remove inside tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944720B8257AE45100311C73 /* String + remove inside tags.swift */; };
 		9457A82F23476E500093FA30 /* UIView, UIColor Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9457A82E23476E500093FA30 /* UIView, UIColor Extension.swift */; };
 		9477A088233EADF900BC7166 /* UIStoryBoard Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9477A087233EADF900BC7166 /* UIStoryBoard Extension.swift */; };
 		94783DAF257A3E0A00940CC9 /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94783DAE257A3E0A00940CC9 /* WebViewVC.swift */; };
@@ -23,6 +24,7 @@
 		94783DFC257AA76F00940CC9 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94783DFB257AA76F00940CC9 /* NotificationService.swift */; };
 		94783E00257AA76F00940CC9 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 94783DF9257AA76F00940CC9 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		94783E09257AA7CD00940CC9 /* OneSignal in Frameworks */ = {isa = PBXBuildFile; productRef = 94783E08257AA7CD00940CC9 /* OneSignal */; };
+		94783E18257AD6E400940CC9 /* MainViewController + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94783E17257AD6E400940CC9 /* MainViewController + TableView.swift */; };
 		947858212577BEB700C7CEF8 /* SwiftyParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947858202577BEB700C7CEF8 /* SwiftyParser.swift */; };
 		947858252577C0CC00C7CEF8 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947858242577C0CC00C7CEF8 /* Article.swift */; };
 		947858282577C34100C7CEF8 /* MainViewController + network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947858272577C34100C7CEF8 /* MainViewController + network.swift */; };
@@ -70,6 +72,7 @@
 		943B6EF4233D59960039A404 /* SidePanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidePanelViewController.swift; sourceTree = "<group>"; };
 		943B6EF6233D5C700039A404 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		943E25EA2340D0390041B7C7 /* ControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPanel.swift; sourceTree = "<group>"; };
+		944720B8257AE45100311C73 /* String + remove inside tags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + remove inside tags.swift"; sourceTree = "<group>"; };
 		9457A82E23476E500093FA30 /* UIView, UIColor Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView, UIColor Extension.swift"; sourceTree = "<group>"; };
 		9477A087233EADF900BC7166 /* UIStoryBoard Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryBoard Extension.swift"; sourceTree = "<group>"; };
 		94783DAE257A3E0A00940CC9 /* WebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewVC.swift; sourceTree = "<group>"; };
@@ -78,6 +81,7 @@
 		94783DFB257AA76F00940CC9 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		94783DFD257AA76F00940CC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94783E0A257AA7EF00940CC9 /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
+		94783E17257AD6E400940CC9 /* MainViewController + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController + TableView.swift"; sourceTree = "<group>"; };
 		947858202577BEB700C7CEF8 /* SwiftyParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyParser.swift; sourceTree = "<group>"; };
 		947858242577C0CC00C7CEF8 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		947858272577C34100C7CEF8 /* MainViewController + network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController + network.swift"; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 				943B6EF2233D57CB0039A404 /* ContainerViewController.swift */,
 				943B6EF6233D5C700039A404 /* MainViewController.swift */,
 				947858272577C34100C7CEF8 /* MainViewController + network.swift */,
+				94783E17257AD6E400940CC9 /* MainViewController + TableView.swift */,
 				943B6EF4233D59960039A404 /* SidePanelViewController.swift */,
 				94783DAE257A3E0A00940CC9 /* WebViewVC.swift */,
 			);
@@ -189,6 +194,7 @@
 				94785832257934EE00C7CEF8 /* Networking.swift */,
 				9457A82E23476E500093FA30 /* UIView, UIColor Extension.swift */,
 				9478582A2577C4A100C7CEF8 /* URLSession + REsult.swift */,
+				944720B8257AE45100311C73 /* String + remove inside tags.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -352,6 +358,7 @@
 				940FEBC925793B690042A1FC /* ArticleCell.swift in Sources */,
 				9478582B2577C4A100C7CEF8 /* URLSession + REsult.swift in Sources */,
 				947858252577C0CC00C7CEF8 /* Article.swift in Sources */,
+				94783E18257AD6E400940CC9 /* MainViewController + TableView.swift in Sources */,
 				943B6EF5233D59960039A404 /* SidePanelViewController.swift in Sources */,
 				947858302579331100C7CEF8 /* UIImageView + cache.swift in Sources */,
 				947858282577C34100C7CEF8 /* MainViewController + network.swift in Sources */,
@@ -363,6 +370,7 @@
 				947858212577BEB700C7CEF8 /* SwiftyParser.swift in Sources */,
 				9477A088233EADF900BC7166 /* UIStoryBoard Extension.swift in Sources */,
 				948113A9234BCF8E00B0F91C /* ReviewRequest.swift in Sources */,
+				944720B9257AE45100311C73 /* String + remove inside tags.swift in Sources */,
 				943B6EF3233D57CB0039A404 /* ContainerViewController.swift in Sources */,
 				943B6EF7233D5C700039A404 /* MainViewController.swift in Sources */,
 				94A9FE662340A49100BAAE4A /* MenuItem.swift in Sources */,
@@ -532,7 +540,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Extrip News/Extrip News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 244XQ923XC;
 				INFOPLIST_FILE = "$(SRCROOT)/Extrip News/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
@@ -556,7 +564,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Extrip News/Extrip News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 244XQ923XC;
 				INFOPLIST_FILE = "$(SRCROOT)/Extrip News/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
@@ -579,6 +587,7 @@
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 244XQ923XC;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -587,6 +596,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 5;
 				PRODUCT_BUNDLE_IDENTIFIER = Extrip.News.En.OneSignalNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -601,6 +611,7 @@
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 244XQ923XC;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -609,6 +620,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 5;
 				PRODUCT_BUNDLE_IDENTIFIER = Extrip.News.En.OneSignalNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

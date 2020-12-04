@@ -13,6 +13,7 @@ struct Article {
   var link: String
   var date: String
   var image: String
+  var html: String
   
 //  init?(xml: XML.Accessor) {
 //
@@ -21,5 +22,5 @@ struct Article {
 //    }
 //  }
   
-  static let empty = Article(description: "", link: "", date: "", image: "")
+  static let empty = Article(description: "", link: "", date: "", image: "", html: "")
 }

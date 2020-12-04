@@ -29,6 +29,8 @@
 		<key>NSAllowsArbitraryLoadsInWebContent</key>
 		<true/>
 	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Your location is required more accurate push delevery</string>
 	<key>NSMainStoryboardFile</key>
 	<string>main</string>
 	<key>UIBackgroundModes</key>

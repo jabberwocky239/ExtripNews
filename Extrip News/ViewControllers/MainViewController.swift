@@ -37,14 +37,17 @@ class MainViewController: UIViewController {
       guard let url = URL(string: newValue.rawValue) else { return }
       navigationItem.title = newValue.name
       getXML(from: url)
+      self.tableView.setContentOffset(CGPoint.zero, animated: true)
     }
   }
   var selectedLink: String!
+  var html: String!
   var articles: [Article] = [] {
     didSet {
       DispatchQueue.main.async {
         self.articles.forEach({print($0)})
-        self.tableView.reloadData() }
+        self.tableView.reloadData()
+      }
     }
   }
   
@@ -97,29 +100,8 @@ extension MainViewController {
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if let destinationVC = segue.destination as? WebViewVC, segue.identifier == "article" {
       destinationVC.urlString = selectedLink
+      destinationVC.html = html
     }
   }
 }
 
-extension MainViewController: UITableViewDataSource {
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return articles.count
-  }
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "article") as! ArticleCell
-    cell.bgImageView.image = nil
-    cell.bgImageView?.loadFromURL(string: articles[indexPath.row].image)
-    cell.dateLabel.text = articles[indexPath.row].date
-    cell.descriptionLabel.text = articles[indexPath.row].description
-    cell.selectionStyle = .none
-    return cell
-  }
-}
-
-extension MainViewController: UITableViewDelegate {
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    selectedLink = articles[indexPath.row].link
-    performSegue(withIdentifier: "article", sender: tableView)
-  }
-}
