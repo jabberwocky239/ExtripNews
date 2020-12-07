@@ -45,7 +45,7 @@ class MainViewController: UIViewController {
   var articles: [Article] = [] {
     didSet {
       DispatchQueue.main.async {
-        self.articles.forEach({print($0)})
+//        self.articles.forEach({print($0)})
         self.tableView.reloadData()
       }
     }
@@ -99,7 +99,7 @@ extension MainViewController {
   }
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if let destinationVC = segue.destination as? WebViewVC, segue.identifier == "article" {
-      destinationVC.urlString = selectedLink
+//      destinationVC.urlString = selectedLink
       destinationVC.html = html
     }
   }

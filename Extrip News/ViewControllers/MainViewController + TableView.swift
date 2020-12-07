@@ -28,6 +28,7 @@ extension MainViewController: UITableViewDataSource {
 
 extension MainViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    print("IMAGE URL = \(articles[indexPath.row].image)")
     selectedLink = articles[indexPath.row].link
     html = articles[indexPath.row].html
     performSegue(withIdentifier: "article", sender: tableView)

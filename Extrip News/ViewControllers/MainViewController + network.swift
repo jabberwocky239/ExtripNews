@@ -30,20 +30,33 @@ extension MainViewController {
         let itemTexts: [String?] = items.map({
           $0["turbo:content"].text?
             .replacingOccurrences(of: "&", with: "")
+          
+          
         })
         let newItems: [XML.Accessor] = itemTexts.compactMap({
           try? XML.parse("<content>" + ($0 ?? "") + "</content>")
         })
-        let pre = "<html><head><style type=\"text/css\"> body {margin: 5%; font-family: \"SFUIText-Regular\"; font-size: 44;line-height:52px;} img { max-width: 100%; width: auto; height: auto; } iframe { max-width: atuo; width: auto; height: auto; } h1 {line-height: 70px;}</style> </head><body>"
+ 
         let htmls: [String] = items.compactMap({
-          pre + ($0["turbo:content"]
+          HTMLTags.prefix + ($0["turbo:content"]
                   .text?
                   .removeBetween("<menu>", "</menu>")?
-                  .removeBetween("<figure>", "</figure>") ?? "") + "</body></html>"
+                  .removeBetween("<figure>", "</figure>") ?? "")
+
+            
+            + HTMLTags.suffix
         })
         
         newItems.enumerated().forEach({
-          articles[$0.offset].description = $0.element.content.header.h1.text ?? ""
+          articles[$0.offset].description = $0.element.content.header.h1.text?      .replacingOccurrences(of: "quot;", with: "\"")
+            .replacingOccurrences(of: "amp;", with: "&")
+            .replacingOccurrences(of: "laquo;", with: "\"")
+            .replacingOccurrences(of: "laquo;", with: "\"")
+            .replacingOccurrences(of: "nbsp;", with: " ")
+            .replacingOccurrences(of: "ndash;", with: " - ")
+            .replacingOccurrences(of: "#039;", with: "'")
+            .replacingOccurrences(of: "Ccedil;", with: "Ç")
+            .replacingOccurrences(of: "ouml;", with: "ő") ?? ""
           articles[$0.offset].link = items[$0.offset].link.text ?? ""
           articles[$0.offset].date = PublicationDate.short(from: items[$0.offset].pubDate.text ?? "")
           articles[$0.offset].image = $0.element.content.header.figure.img.attributes["src"] ?? ""
@@ -77,3 +90,29 @@ struct PublicationDate {
   }
 }
 
+struct HTMLTags {
+  static var margin: Int {
+    return 5
+  }
+  static var fontSize: Int {
+    let result = UIDevice.current.userInterfaceIdiom == .pad ? 30 : 44
+    return result
+  }
+  static var suffix: String {"</body></html>"}
+  static var prefix: String {
+  """
+  <html>
+  <head>
+  <style type=\"text/css\"> body {margin: \(margin)%;
+    font-family: \"SFUIText-Regular\";
+    font-size: \(fontSize);
+    line-height:52px;}
+    img { max-width: 100%; width: auto; height: auto; }
+    iframe { max-width: atuo; width: auto; height: auto; }
+    h1 {line-height: 75px; text-align:center;}
+  </style>
+  </head><body>
+  """
+  }
+
+}

@@ -65,7 +65,7 @@ extension SidePanelViewController: UITableViewDataSource {
       default: return ""
       }
     }()
-    let rect = CGRect(x: 0, y: 0, width: self.view.frame.width * 0.67, height: 44)
+    let rect = CGRect(x: 0, y: 0, width: self.view.frame.width * ControlPanel.menuSlideWidth, height: 44)
     let view = UIView(frame: rect)
     let label = UILabel(frame: rect)
     label.text = titleText

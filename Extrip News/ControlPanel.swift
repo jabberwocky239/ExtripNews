@@ -41,7 +41,12 @@ struct ControlPanel {
   
   static let phoneSlideMenuWidth: CGFloat = 0.67
   static let padSlideMenuWidth: CGFloat = 0.33
-  
+  static var menuSlideWidth: CGFloat {
+    switch UIDevice.current.userInterfaceIdiom {
+    case .pad: return ControlPanel.padSlideMenuWidth
+    default: return ControlPanel.phoneSlideMenuWidth
+    }
+  }
   //MARK: - WebView
   
   static let mainDivColor: UIColor = ControlPanel.ferryButtonGreenColor
