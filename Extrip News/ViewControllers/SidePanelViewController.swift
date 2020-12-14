@@ -39,7 +39,6 @@ class SidePanelViewController: UIViewController {
     }()
     tableView.bounces = false
     tableView.transform = CGAffineTransform (scaleX: 1,y: -1)
-    print(tableView.delegate)
   }
   
 }

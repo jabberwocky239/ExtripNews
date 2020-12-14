@@ -13,7 +13,11 @@ class WebViewVC: UIViewController {
   
   @IBOutlet weak var webView: WKWebView!
 //  var urlString: String!
-  var html: String!
+  var html: HTML! {
+    didSet {
+      print("HTML \(String(describing: html.content))")
+    }
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -22,7 +26,7 @@ class WebViewVC: UIViewController {
 //    print(url)
 //    webView.load(URLRequest(url: url))
     webView.scrollView.bounces = false
-    webView.loadHTMLString(html, baseURL: nil)
-    print("HTML: - \(html)")
+    webView.loadHTMLString(html.content, baseURL: nil)
+    print("HTML: - \(String(describing: html))")
   }
 }

@@ -41,9 +41,10 @@ class MainViewController: UIViewController {
     }
   }
   var selectedLink: String!
-  var html: String!
+  var html: HTML!
   var articles: [Article] = [] {
     didSet {
+      self.articles.filter({$0.image != ""})
       DispatchQueue.main.async {
 //        self.articles.forEach({print($0)})
         self.tableView.reloadData()

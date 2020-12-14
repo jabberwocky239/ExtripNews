@@ -14,10 +14,14 @@ extension UIImageView {
   
   func loadFromURL(string: String) {
     guard let url = URL(string: string) else { return }
-    image = nil
+    DispatchQueue.main.async {
+      self.image = nil
+    }
     
     if let cachedImage = imageCache.object(forKey: string as NSString) {
-      image = cachedImage
+      DispatchQueue.main.async {
+        self.image = cachedImage
+      }
       return
     }
     
@@ -27,15 +31,11 @@ extension UIImageView {
       case .success(let data):
         guard  let image = UIImage(data: data) else { return }
         imageCache.setObject(image, forKey: url.absoluteString as NSString)
-        self.image = image
+          self.image = image
       case .failure(let error):
         print(error)
-        self.image = nil
+          self.image = nil
       }
-      
     }
-    
-    
   }
 }
-
