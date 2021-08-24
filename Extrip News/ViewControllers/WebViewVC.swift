@@ -8,11 +8,12 @@
 
 import UIKit
 import WebKit
+import GoogleMobileAds
 
-class WebViewVC: UIViewController {
+class WebViewVC: UIViewController, GADAdaptiveBannerVC {
   
   @IBOutlet weak var webView: WKWebView!
-//  var urlString: String!
+  @IBOutlet weak var bannerView: GADBannerView!
   var html: HTML! {
     didSet {
       print("HTML \(String(describing: html.content))")
@@ -21,12 +22,22 @@ class WebViewVC: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-   print("WEBVIEWVC LOADED")
-//    guard let url = URL(string: urlString) else {return}
-//    print(url)
-//    webView.load(URLRequest(url: url))
+    bannerView.adUnitID = "ca-app-pub-5250587637050130/6447742675"
+    bannerView.rootViewController = self
     webView.scrollView.bounces = false
     webView.loadHTMLString(html.content, baseURL: nil)
-    print("HTML: - \(String(describing: html))")
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    loadBannerAd()
+  }
+  
+  override func viewWillTransition(to size: CGSize,
+                                   with coordinator: UIViewControllerTransitionCoordinator) {
+    super.viewWillTransition(to: size, with: coordinator)
+    coordinator.animate(alongsideTransition: { _ in
+      self.loadBannerAd()
+    })
   }
 }

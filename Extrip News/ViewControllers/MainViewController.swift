@@ -7,6 +7,27 @@
 //
 
 import UIKit
+import GoogleMobileAds
+
+protocol GADAdaptiveBannerVC: UIViewController {
+  var bannerView: GADBannerView! { get set }
+  func loadBannerAd()
+}
+
+extension GADAdaptiveBannerVC {
+  func loadBannerAd() {
+    let frame = { () -> CGRect in
+      if #available(iOS 11.0, *) {
+        return view.frame.inset(by: view.safeAreaInsets)
+      } else {
+        return view.frame
+      }
+    }()
+    let viewWidth = frame.size.width
+    bannerView.adSize = GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(viewWidth)
+    bannerView.load(GADRequest())
+  }
+}
 
 protocol MainViewControllerDelegate {
   func toggleRightMenu()
@@ -20,7 +41,7 @@ final class ArticleCell: UITableViewCell {
 }
 
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, GADAdaptiveBannerVC {
   
   @IBOutlet weak var toolBar: UIToolbar!
   
@@ -29,6 +50,7 @@ class MainViewController: UIViewController {
   var menuButton: UIBarButtonItem!
   var delegate: MainViewControllerDelegate?
   
+  @IBOutlet weak var bannerView: GADBannerView!
   //XML Parsing
   
   @IBOutlet weak var tableView: UITableView!
@@ -57,6 +79,21 @@ class MainViewController: UIViewController {
     self.navigationController?.isNavigationBarHidden = false
     channel = Channels(from: UserDefaults.standard.string(forKey: UserDefaultsKeys.lastChannel) ?? "")
     toolBarConfig()
+    bannerView.adUnitID = "ca-app-pub-5250587637050130/2700069352"
+    bannerView.rootViewController = self
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    loadBannerAd()
+  }
+  
+  override func viewWillTransition(to size: CGSize,
+                                   with coordinator: UIViewControllerTransitionCoordinator) {
+    super.viewWillTransition(to: size, with: coordinator)
+    coordinator.animate(alongsideTransition: { _ in
+      self.loadBannerAd()
+    })
   }
 }
 

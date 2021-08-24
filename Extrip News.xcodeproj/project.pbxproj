@@ -32,6 +32,14 @@
 		947858302579331100C7CEF8 /* UIImageView + cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478582F2579331100C7CEF8 /* UIImageView + cache.swift */; };
 		94785833257934EE00C7CEF8 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94785832257934EE00C7CEF8 /* Networking.swift */; };
 		948113A9234BCF8E00B0F91C /* ReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948113A8234BCF8E00B0F91C /* ReviewRequest.swift */; };
+		94A773B525CD6E9D00E21E36 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A773B425CD6E9C00E21E36 /* AdSupport.framework */; };
+		94A773D525CD783300E21E36 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9432B521233D721C00E70B01 /* WebKit.framework */; };
+		94A773DC25CD78C300E21E36 /* GoogleAppMeasurement.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A773D625CD78BF00E21E36 /* GoogleAppMeasurement.xcframework */; };
+		94A773DD25CD78C300E21E36 /* nanopb.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A773D725CD78BF00E21E36 /* nanopb.xcframework */; };
+		94A773DE25CD78C300E21E36 /* PromisesObjC.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A773D825CD78BF00E21E36 /* PromisesObjC.xcframework */; };
+		94A773DF25CD78C300E21E36 /* GoogleUtilities.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A773D925CD78C000E21E36 /* GoogleUtilities.xcframework */; };
+		94A773E025CD78C300E21E36 /* UserMessagingPlatform.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A773DA25CD78C000E21E36 /* UserMessagingPlatform.xcframework */; };
+		94A773E125CD78C300E21E36 /* GoogleMobileAds.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A773DB25CD78C300E21E36 /* GoogleMobileAds.xcframework */; };
 		94A9FE662340A49100BAAE4A /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9FE652340A49100BAAE4A /* MenuItem.swift */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +96,13 @@
 		9478582F2579331100C7CEF8 /* UIImageView + cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + cache.swift"; sourceTree = "<group>"; };
 		94785832257934EE00C7CEF8 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		948113A8234BCF8E00B0F91C /* ReviewRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequest.swift; sourceTree = "<group>"; };
+		94A773B425CD6E9C00E21E36 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		94A773D625CD78BF00E21E36 /* GoogleAppMeasurement.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleAppMeasurement.xcframework; sourceTree = "<group>"; };
+		94A773D725CD78BF00E21E36 /* nanopb.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = nanopb.xcframework; sourceTree = "<group>"; };
+		94A773D825CD78BF00E21E36 /* PromisesObjC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PromisesObjC.xcframework; sourceTree = "<group>"; };
+		94A773D925CD78C000E21E36 /* GoogleUtilities.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleUtilities.xcframework; sourceTree = "<group>"; };
+		94A773DA25CD78C000E21E36 /* UserMessagingPlatform.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = UserMessagingPlatform.xcframework; sourceTree = "<group>"; };
+		94A773DB25CD78C300E21E36 /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleMobileAds.xcframework; sourceTree = "<group>"; };
 		94A9FE652340A49100BAAE4A /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,7 +111,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94A773D525CD783300E21E36 /* WebKit.framework in Frameworks */,
+				94A773E125CD78C300E21E36 /* GoogleMobileAds.xcframework in Frameworks */,
+				94A773DC25CD78C300E21E36 /* GoogleAppMeasurement.xcframework in Frameworks */,
+				94A773B525CD6E9D00E21E36 /* AdSupport.framework in Frameworks */,
+				94A773DF25CD78C300E21E36 /* GoogleUtilities.xcframework in Frameworks */,
+				94A773DE25CD78C300E21E36 /* PromisesObjC.xcframework in Frameworks */,
+				94A773DD25CD78C300E21E36 /* nanopb.xcframework in Frameworks */,
 				94783DCD257A998000940CC9 /* OneSignal in Frameworks */,
+				94A773E025CD78C300E21E36 /* UserMessagingPlatform.xcframework in Frameworks */,
 				942B92B625867D7100B2EDF0 /* SwiftyXMLParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,7 +146,14 @@
 		9432B520233D721C00E70B01 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				94A773B425CD6E9C00E21E36 /* AdSupport.framework */,
 				9432B521233D721C00E70B01 /* WebKit.framework */,
+				94A773D625CD78BF00E21E36 /* GoogleAppMeasurement.xcframework */,
+				94A773DB25CD78C300E21E36 /* GoogleMobileAds.xcframework */,
+				94A773D925CD78C000E21E36 /* GoogleUtilities.xcframework */,
+				94A773D725CD78BF00E21E36 /* nanopb.xcframework */,
+				94A773D825CD78BF00E21E36 /* PromisesObjC.xcframework */,
+				94A773DA25CD78C000E21E36 /* UserMessagingPlatform.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -471,6 +501,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -526,6 +557,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -542,13 +574,22 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 244XQ923XC;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Extrip News/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+<<<<<<< Updated upstream
 				MARKETING_VERSION = 5.1;
+=======
+				MARKETING_VERSION = 6.0;
+				OTHER_LDFLAGS = "-ObjC";
+>>>>>>> Stashed changes
 				PRODUCT_BUNDLE_IDENTIFIER = Extrip.News.En;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;
@@ -566,13 +607,22 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 244XQ923XC;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Extrip News/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+<<<<<<< Updated upstream
 				MARKETING_VERSION = 5.1;
+=======
+				MARKETING_VERSION = 6.0;
+				OTHER_LDFLAGS = "-ObjC";
+>>>>>>> Stashed changes
 				PRODUCT_BUNDLE_IDENTIFIER = Extrip.News.En;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;
@@ -596,7 +646,11 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+<<<<<<< Updated upstream
 				MARKETING_VERSION = 5.1;
+=======
+				MARKETING_VERSION = 6.0;
+>>>>>>> Stashed changes
 				PRODUCT_BUNDLE_IDENTIFIER = Extrip.News.En.OneSignalNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -620,7 +674,11 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+<<<<<<< Updated upstream
 				MARKETING_VERSION = 5.1;
+=======
+				MARKETING_VERSION = 6.0;
+>>>>>>> Stashed changes
 				PRODUCT_BUNDLE_IDENTIFIER = Extrip.News.En.OneSignalNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

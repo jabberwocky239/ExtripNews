@@ -8,18 +8,19 @@
 
 import UIKit
 import OneSignal
+import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
-
+  
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
 
-    
+    GADMobileAds.sharedInstance().start(completionHandler: nil)
     //Remove this method to stop OneSignal Debugging
-    OneSignal.setLogLevel(.LL_VERBOSE, visualLevel: .LL_NONE)
+//    OneSignal.setLogLevel(.LL_VERBOSE, visualLevel: .LL_NONE)
 
     //START OneSignal initialization code
     let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false, kOSSettingsKeyInAppLaunchURL: false]
